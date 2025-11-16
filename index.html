@@ -9,230 +9,75 @@
     
     <style>
         :root {
-            --color-dark-blue: #0f2c4a; /* Основной темный фон */
-            --color-cyan: #00bcd4; /* Акцентный голубой */
-            --color-orange: #ff6b35; /* Акцентный оранжевый */
-            --color-text: #e0e0e0; /* Светлый текст на темном фоне */
-            --color-light-text: #a0a0a0; /* Более светлый текст */
-            --color-bg-light: #1a3a52; /* Светлее темного фона */
-            --color-table-header: #0a2033; /* Заголовок таблицы */
-            --color-table-row-even: #153046; /* Четные строки таблицы */
-            --color-table-row-odd: #0f2c4a; /* Нечетные строки таблицы */
+            --color-light-bg: #ffffff; /* Чистый белый фон */
+            --color-primary: #6c5ce7; /* Фиолетовый (Revolut-стиль) */
+            --color-secondary: #0984e3; /* Синий акцент */
+            --color-cta: #fd79a8; /* Розовый акцент для кнопок */
+            --color-text: #2d3436; /* Темный текст */
+            --color-border: #dfe6e9; /* Светлая рамка */
         }
-        body { font-family: 'Arial', sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: var(--color-dark-blue); color: var(--color-text); }
+        body { font-family: 'Arial', sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: var(--color-light-bg); color: var(--color-text); }
         .container { max-width: 1000px; margin: 0 auto; padding: 20px; }
+        
         /* HERO SECTION */
         .hero {
-            background: linear-gradient(135deg, var(--color-dark-blue) 0%, #0a2033 50%, var(--color-dark-blue) 100%);
-            color: #fff;
-            padding: 80px 20px;
+            background-color: var(--color-light-bg); 
+            padding: 60px 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
-            border-bottom: 5px solid var(--color-cyan);
+            border-bottom: 2px solid var(--color-border);
         }
-        .hero h1 { font-size: 44px; font-weight: 700; margin-bottom: 10px; line-height: 1.2; }
-        .hero h1 span { color: var(--color-cyan); display: block; margin-top: 5px; }
-        .hero p { font-size: 20px; font-weight: 300; margin-bottom: 40px; color: var(--color-light-text); }
+        .hero h1 { 
+            font-size: 44px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; 
+            color: var(--color-primary); 
+        }
+        .hero h1 span { color: var(--color-secondary); display: block; margin-top: 5px; }
+        .hero p { font-size: 20px; font-weight: 400; margin-bottom: 40px; color: #636e72; }
         .cta-button {
             display: inline-block;
-            background: linear-gradient(90deg, var(--color-cyan) 0%, var(--color-orange) 100%);
+            background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-cta) 100%);
             color: #fff;
             padding: 15px 30px;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 50px; /* Более округлый, современный вид */
             font-size: 18px;
             font-weight: 600;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
         }
-        .cta-button:hover { opacity: 0.9; transform: translateY(-2px); }
+        .cta-button:hover { opacity: 0.9; transform: translateY(-1px); }
         
         /* ANALYSIS SECTION */
-        .analysis-section { padding: 40px 20px; background-color: var(--color-dark-blue); }
+        .analysis-section { padding: 40px 20px; background-color: var(--color-light-bg); }
         .analysis-section h2 { 
-            font-size: 36px; color: var(--color-cyan); text-align: center; margin-bottom: 50px;
-            border-bottom: 3px solid var(--color-orange); display: inline-block; padding-bottom: 5px;
+            font-size: 32px; color: var(--color-primary); text-align: center; margin-bottom: 40px;
+            padding-bottom: 10px;
         }
 
-        /* ТАБЛИЦА СРАВНЕНИЯ ТАРИФОВ */
+        /* ТАБЛИЦА СРАВНЕНИЯ ТАРИФОВ - ЧИСТЫЙ СТИЛЬ */
         .comparison-table { 
-            width: 100%; border-collapse: collapse; margin-top: 40px; font-size: 15px;
-            background-color: var(--color-bg-light); border-radius: 8px; overflow: hidden;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            width: 100%; border-collapse: collapse; margin-top: 30px; font-size: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05); /* Легкая тень */
         }
         .comparison-table th, .comparison-table td { 
-            padding: 15px 20px; text-align: left; border: 1px solid #2a4a60; color: var(--color-text);
+            padding: 15px 20px; text-align: left; border-bottom: 1px solid var(--color-border);
         }
         .comparison-table th { 
-            background-color: var(--color-table-header); color: #fff; font-weight: 600; 
+            background-color: #f7f8fa; color: var(--color-text); font-weight: 700; 
             text-transform: uppercase;
         }
         .comparison-table .tariff-name { 
-            background-color: var(--color-cyan); color: var(--color-dark-blue); 
+            background-color: var(--color-primary); color: #fff; 
             font-weight: bold; text-align: center;
         }
-        .comparison-table tr:nth-child(even) { background-color: var(--color-table-row-even); }
-        .comparison-table tr:nth-child(odd) { background-color: var(--color-table-row-odd); }
-        .comparison-table .feature { font-weight: bold; color: var(--color-cyan); }
-        .comparison-table .highlight { background-color: rgba(0, 188, 212, 0.1); } /* Подсветка для лучших опций */
+        .comparison-table tr:nth-child(even) { background-color: #fcfcfc; }
+        .comparison-table tr:nth-child(odd) { background-color: var(--color-light-bg); }
+        .comparison-table .feature { font-weight: bold; color: var(--color-secondary); }
+        .comparison-table .highlight { background-color: rgba(10, 188, 212, 0.08); font-weight: bold; } 
 
-        /* КАРТОЧКИ С РЕКОМЕНДАЦИЯМИ / SCORECARD */
+        /* КАРТОЧКИ С РЕКОМЕНДАЦИЯМИ - ЧИСТЫЙ СТИЛЬ */
         .recommendation-cards { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 50px; justify-content: center; }
         .rec-card {
-            flex: 1; min-width: 280px; max-width: 32%; /* 3 колонки */
-            background-color: var(--color-bg-light); border-radius: 8px;
-            padding: 25px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border-top: 5px solid var(--color-orange);
-            text-align: center;
-        }
-        .rec-card h3 { color: var(--color-cyan); margin-top: 0; font-size: 24px; }
-        .rec-card p { color: var(--color-light-text); font-size: 15px; }
-        .rec-card .score { font-size: 40px; font-weight: 700; color: var(--color-orange); margin-bottom: 15px; }
-        .rec-card .score small { font-size: 18px; color: var(--color-light-text); }
-        .rec-card .cta-button { padding: 10px 20px; font-size: 16px; margin-top: 20px; }
-
-        /* FOOTER */
-        .footer { 
-            background-color: var(--color-table-header); 
-            color: #a0a0a0; 
-            text-align: center; 
-            padding: 20px; 
-            font-size: 13px;
-            margin-top: 50px;
-        }
-
-        /* Адаптивность для мобильных устройств */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; }
-            .hero p { font-size: 16px; }
-            .analysis-section h2 { font-size: 28px; }
-            .comparison-table { font-size: 12px; }
-            .comparison-table th, .comparison-table td { padding: 10px; }
-            .recommendation-cards { flex-direction: column; align-items: center; }
-            .rec-card { max-width: 90%; }
-        }
-    </style>
-</head>
-<body>
-
-<div class="hero" id="top">
-    <h1>Какой Тариф Revolut Выбрать? <span>Полный Разбор: Standard, Plus, Premium, Metal и Ultra</span></h1>
-    <p>Не теряйте деньги на комиссиях! Экспертный анализ тарифов Revolut: что дает каждый план. Сравнение лимитов, страховок и кэшбэка. Получите максимум от ваших финансов.</p>
-    <a href="#comparison-table" class="cta-button">Получить Полный Сравнительный Отчет (2026)</a>
-</div>
-
-<div class="container analysis-section" id="comparison-table">
-    <h2>Сравнительная Таблица: Преимущества и Стоимость Платного Сервиса</h2>
-
-    <table class="comparison-table">
-        <thead>
-            <tr>
-                <th>Характеристика</th>
-                <th class="tariff-name">Standard</th>
-                <th class="tariff-name">Plus</th>
-                <th class="tariff-name">Premium</th>
-                <th class="tariff-name">Metal</th>
-                <th class="tariff-name">Ultra</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="feature">Ежемесячная плата</td>
-                <td>Бесплатно</td>
-                <td>~€2.99</td>
-                <td>~€7.99</td>
-                <td>~€13.99</td>
-                <td>~€45.00</td>
-            </tr>
-            <tr>
-                <td class="feature">Бесплатные переводы (международные)</td>
-                <td>Лимитировано</td>
-                <td>Лимитировано</td>
-                <td class="highlight">Безлимитно</td>
-                <td class="highlight">Безлимитно</td>
-                <td class="highlight">Безлимитно</td>
-            </tr>
-            <tr>
-                <td class="feature">Кэшбэк на покупки</td>
-                <td>Нет</td>
-                <td>Нет</td>
-                <td>До 0.1%</td>
-                <td class="highlight">До 1%</td>
-                <td class="highlight">До 5%</td>
-            </tr>
-            <tr>
-                <td class="feature">Страхование путешествий</td>
-                <td>Нет</td>
-                <td>Базовое</td>
-                <td class="highlight">Расширенное</td>
-                <td class="highlight">Расширенное + аренда авто</td>
-                <td class="highlight">Полное (включая отмену поездки)</td>
-            </tr>
-            <tr>
-                <td class="feature">Лимиты бесплатного снятия наличных в банкоматах</td>
-                <td>€200/мес</td>
-                <td>€200/мес</td>
-                <td class="highlight">€400/мес</td>
-                <td class="highlight">€800/мес</td>
-                <td class="highlight">€2000/мес</td>
-            </tr>
-            <tr>
-                <td class="feature">Доступ в LoungeKey (бизнес-залы)</td>
-                <td>Нет</td>
-                <td>Нет</td>
-                <td>Платный доступ</td>
-                <td class="highlight">Бесплатный доступ</td>
-                <td class="highlight">Неограниченный бесплатный доступ</td>
-            </tr>
-            <tr>
-                <td class="feature">Инвестиции (акции, ETF)</td>
-                <td>Базовый доступ</td>
-                <td>Расширенный доступ</td>
-                <td class="highlight">Сниженные комиссии</td>
-                <td class="highlight">Еще более сниженные комиссии</td>
-                <td class="highlight">Самые низкие комиссии</td>
-            </tr>
-            <tr>
-                <td class="feature">Консьерж-сервис</td>
-                <td>Нет</td>
-                <td>Нет</td>
-                <td>Нет</td>
-                <td>Нет</td>
-                <td class="highlight">Да</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2 style="margin-top: 80px;">Наши Рекомендации: Какой Тариф Revolut Подходит Вам?</h2>
-    <div class="recommendation-cards">
-        <div class="rec-card">
-            <h3>Revolut Premium: Для Активных Путешественников</h3>
-            <p>Идеально для тех, кто часто путешествует и совершает международные переводы. Предлагает расширенное страхование и выгодные курсы обмена.</p>
-            <div class="score">8.5<small>/10</small></div>
-            <a href="[ВАША ПАРТНЕРСКАЯ ССЫЛКА REVOLUT PREMIUM]" class="cta-button" target="_blank" rel="nofollow noopener">Открыть Premium</a>
-        </div>
-
-        <div class="rec-card">
-            <h3>Revolut Metal: Для Искушенных и Бизнеса</h3>
-            <p>Лучший выбор для тех, кто ищет максимальный кэшбэк, страхование для бизнеса и бесплатный доступ в бизнес-залы аэропортов.</p>
-            <div class="score">9.1<small>/10</small></div>
-            <a href="[ВАША ПАРТНЕРСКАЯ ССЫЛКА REVOLUT METAL]" class="cta-button" target="_blank" rel="nofollow noopener">Открыть Metal</a>
-        </div>
-
-        <div class="rec-card">
-            <h3>Revolut Ultra: Элитный Выбор для Максималистов</h3>
-            <p>Для тех, кто требует максимального комфорта, эксклюзивных привилегий, высочайшего кэшбэка и персонального консьерж-сервиса.</p>
-            <div class="score">9.8<small>/10</small></div>
-            <a href="[ВАША ПАРТНЕРСКАЯ ССЫЛКА REVOLUT ULTRA]" class="cta-button" target="_blank" rel="nofollow noopener">Открыть Ultra</a>
-        </div>
-    </div>
-</div>
-
-<div class="footer">
-    &copy; 2026. Все права защищены. <br>
-    Мы являемся партнерами Revolut и можем получать комиссию от регистраций.
-</div>
-
-</body>
-</html>
+            flex: 1; min-width: 280px; max-width: 32%;
+            background-color: #fff; border-radius: 12px;
+            padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border:
