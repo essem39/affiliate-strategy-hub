@@ -80,4 +80,137 @@
             flex: 1; min-width: 280px; max-width: 32%;
             background-color: #fff; border-radius: 12px;
             padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border:
+            border: 1px solid var(--color-border);
+            text-align: center;
+        }
+        .rec-card h3 { color: var(--color-primary); margin-top: 0; font-size: 26px; }
+        .rec-card p { color: #636e72; font-size: 15px; }
+        .rec-card .score { font-size: 44px; font-weight: 800; color: var(--color-cta); margin-bottom: 15px; }
+        .rec-card .score small { font-size: 20px; color: #636e72; }
+        .rec-card .cta-button { padding: 12px 25px; font-size: 16px; margin-top: 20px; }
+
+        /* FOOTER */
+        .footer { 
+            background-color: #f7f8fa; 
+            color: #636e72; 
+            text-align: center; 
+            padding: 25px; 
+            font-size: 14px;
+            margin-top: 60px;
+            border-top: 1px solid var(--color-border);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 34px; }
+            .recommendation-cards { flex-direction: column; align-items: center; }
+            .rec-card { max-width: 95%; }
+            .comparison-table th, .comparison-table td { padding: 10px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero" id="top">
+    <h1>Какой Тариф Revolut Выбрать? <span>Полный Разбор: Standard, Plus, Premium, Metal и Ultra</span></h1>
+    <p>Не теряйте деньги на комиссиях! Мы провели экспертный анализ и сравнили лимиты, страховки и кэшбэк. Начните получать максимум от ваших финансов.</p>
+    <a href="#comparison-table" class="cta-button">Смотреть Сравнительный Отчет и Рекомендации</a>
+</div>
+
+<div class="container analysis-section" id="comparison-table">
+    <h2>Сравнительная Таблица: Преимущества и Стоимость Платного Сервиса</h2>
+
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Характеристика</th>
+                <th class="tariff-name" style="background-color: #a29bfe;">Standard</th>
+                <th class="tariff-name" style="background-color: #48c48a;">Plus</th>
+                <th class="tariff-name" style="background-color: #f7a43b;">Premium</th>
+                <th class="tariff-name" style="background-color: #3d5a80;">Metal</th>
+                <th class="tariff-name" style="background-color: #0c1a2c;">Ultra</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="feature">Ежемесячная плата</td>
+                <td>Бесплатно</td>
+                <td>~€2.99</td>
+                <td>~€7.99</td>
+                <td>~€13.99</td>
+                <td>~€45.00</td>
+            </tr>
+            <tr>
+                <td class="feature">Бесплатные переводы (международные)</td>
+                <td>Лимитировано</td>
+                <td>Лимитировано</td>
+                <td class="highlight">Безлимитно</td>
+                <td class="highlight">Безлимитно</td>
+                <td class="highlight">Безлимитно</td>
+            </tr>
+            <tr>
+                <td class="feature">Кэшбэк на покупки</td>
+                <td>Нет</td>
+                <td>Нет</td>
+                <td>До 0.1%</td>
+                <td class="highlight">До 1%</td>
+                <td class="highlight">До 5%</td>
+            </tr>
+            <tr>
+                <td class="feature">Страхование путешествий</td>
+                <td>Нет</td>
+                <td>Базовое</td>
+                <td class="highlight">Расширенное</td>
+                <td class="highlight">Расширенное + аренда авто</td>
+                <td class="highlight">Полное (включая отмену поездки)</td>
+            </tr>
+            <tr>
+                <td class="feature">Лимиты бесплатного снятия наличных в банкоматах</td>
+                <td>€200/мес</td>
+                <td>€200/мес</td>
+                <td class="highlight">€400/мес</td>
+                <td class="highlight">€800/мес</td>
+                <td class="highlight">€2000/мес</td>
+            </tr>
+            <tr>
+                <td class="feature">Доступ в LoungeKey (бизнес-залы)</td>
+                <td>Нет</td>
+                <td>Нет</td>
+                <td>Платный доступ</td>
+                <td class="highlight">Бесплатный доступ</td>
+                <td class="highlight">Неограниченный бесплатный доступ</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2 style="margin-top: 80px;">Наши Рекомендации: Какой Тариф Revolut Подходит Вам?</h2>
+    <div class="recommendation-cards">
+        <div class="rec-card">
+            <h3>Revolut Premium: Для Активных Путешественников</h3>
+            <p>Идеально для тех, кто часто путешествует и совершает международные переводы. Предлагает расширенное страхование и выгодные курсы обмена.</p>
+            <div class="score">8.5<small>/10</small></div>
+            <a href="[ВАША ПАРТНЕРСКАЯ ССЫЛКА REVOLUT PREMIUM]" class="cta-button" target="_blank" rel="nofollow noopener">Открыть Premium</a>
+        </div>
+
+        <div class="rec-card">
+            <h3>Revolut Metal: Для Бизнеса и Максимального Кэшбэка</h3>
+            <p>Лучший выбор для тех, кто ищет максимальный кэшбэк, страхование для бизнеса и бесплатный доступ в бизнес-залы аэропортов.</p>
+            <div class="score">9.1<small>/10</small></div>
+            <a href="[ВАША ПАРТНЕРСКАЯ ССЫЛКА REVOLUT METAL]" class="cta-button" target="_blank" rel="nofollow noopener">Открыть Metal</a>
+        </div>
+
+        <div class="rec-card">
+            <h3>Revolut Ultra: Элитный Выбор для Максималистов</h3>
+            <p>Для тех, кто требует максимального комфорта, эксклюзивных привилегий, высочайшего кэшбэка и персонального консьерж-сервиса.</p>
+            <div class="score">9.8<small>/10</small></div>
+            <a href="[ВАША ПАРТНЕРСКАЯ ССЫЛКА REVOLUT ULTRA]" class="cta-button" target="_blank" rel="nofollow noopener">Открыть Ultra</a>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    &copy; 2026. Все права защищены. <br>
+    Мы являемся партнерами Revolut и можем получать комиссию от регистраций.
+</div>
+
+</body>
+</html>
