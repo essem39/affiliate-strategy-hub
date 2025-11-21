@@ -1,27 +1,792 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>VPS/VDS серверы в аренду от 190 руб/месяц - купить виртуальный хостинг ProfitServer</title>
-<meta name="description" content="Кейс: Как мы получили 10% пассивного дохода используя VPS серверы ProfitServer. Надежные VPS/VDS от 190₽/месяц с DDoS защитой, 24/7 поддержкой и гарантией 99.9% uptime." />
-<meta name="keywords" content="VPS, VDS, виртуальный сервер, хостинг, ProfitServer, аренда сервера, дешевый VPS, надежный хостинг, пассивный доход" />
-<meta name="author" content="ProfitServer Partner" />
-<meta property="og:type" content="website" />
-<meta property="og:title" content="VPS серверы ProfitServer - Кейс 10% пассивного дохода" />
-<meta property="og:description" content="Реальная история о том, как качественные VPS серверы от 190₽/месяц помогли создать стабильный источник пассивного дохода. Узнайте наш кейс!" />
-<meta property="og:image" content="/images/vps_hosting_1.jpeg" />
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:title" content="VPS серверы ProfitServer - Кейс 10% пассивного дохода" />
-<meta property="twitter:description" content="Реальная история о том, как качественные VPS серверы от 190₽/месяц помогли создать стабильный источник пассивного дохода." />
-<meta property="twitter:image" content="/images/vps_hosting_1.jpeg" />
-<meta name="robots" content="index, follow" />
-<meta name="googlebot" content="index, follow" />
-<link rel="canonical" href="https://profitserver.ru" />
-<script type="module" crossorigin src="/assets/index-BZFqTCTu.js"></script>
-<link rel="stylesheet" crossorigin href="/assets/index-C25uSnnc.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VPS/VDS серверы в аренду от 190 руб/месяц - купить виртуальный хостинг ProfitServer</title>
+    <meta name="description" content="Кейс: Как мы получили 10% пассивного дохода используя VPS серверы ProfitServer. Надежные VPS/VDS от 190₽/месяц с DDoS защитой, 24/7 поддержкой и гарантией 99.9% uptime.">
+    <meta name="keywords" content="VPS, VDS, виртуальный сервер, хостинг, ProfitServer, аренда сервера, дешевый VPS, надежный хостинг, пассивный доход">
+    <meta name="author" content="ProfitServer Partner">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="VPS серверы ProfitServer - Кейс 10% пассивного дохода">
+    <meta property="og:description" content="Реальная история о том, как качественные VPS серверы от 190₽/месяц помогли создать стабильный источник пассивного дохода. Узнайте наш кейс!">
+    <meta property="og:image" content="./images/vps_hosting_1.jpeg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="VPS серверы ProfitServer - Кейс 10% пассивного дохода">
+    <meta property="twitter:description" content="Реальная история о том, как качественные VPS серверы от 190₽/месяц помогли создать стабильный источник пассивного дохода.">
+    <meta property="twitter:image" content="./images/vps_hosting_1.jpeg">
+    
+    <!-- Additional SEO -->
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <link rel="canonical" href="https://profitserver.ru">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        /* ProfitServer Brand Colors */
+        :root {
+            --primary: 195 100% 44%; /* #00ABE1 */
+            --primary-foreground: 0 0% 100%;
+            --secondary: 220 15% 15%; /* #231F20 */
+            --secondary-foreground: 0 0% 100%;
+            --success: 142 76% 36%;
+            --success-foreground: 0 0% 100%;
+            --warning: 38 92% 50%;
+            --warning-foreground: 0 0% 100%;
+            --muted: 220 10% 96%;
+            --muted-foreground: 220 10% 45%;
+            --border: 220 10% 90%;
+            --card: 0 0% 100%;
+            --card-foreground: 220 15% 15%;
+        }
+        
+        .bg-primary { background-color: hsl(var(--primary)); }
+        .text-primary { color: hsl(var(--primary)); }
+        .text-primary-foreground { color: hsl(var(--primary-foreground)); }
+        .bg-secondary { background-color: hsl(var(--secondary)); }
+        .text-secondary-foreground { color: hsl(var(--secondary-foreground)); }
+        .bg-success { background-color: hsl(var(--success)); }
+        .text-success { color: hsl(var(--success)); }
+        .text-success-foreground { color: hsl(var(--success-foreground)); }
+        .bg-warning { background-color: hsl(var(--warning)); }
+        .text-warning { color: hsl(var(--warning)); }
+        .bg-muted { background-color: hsl(var(--muted)); }
+        .text-muted-foreground { color: hsl(var(--muted-foreground)); }
+        .border-border { border-color: hsl(var(--border)); }
+        .bg-card { background-color: hsl(var(--card)); }
+        .text-card-foreground { color: hsl(var(--card-foreground)); }
+        
+        /* Gradients */
+        .hero-gradient {
+            background: linear-gradient(135deg, hsl(220 15% 15%), hsl(220 15% 25%));
+        }
+        
+        .profit-gradient {
+            background: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+        }
+        
+        /* Animations */
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s ease-in-out infinite;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% {
+                box-shadow: 0 0 20px hsl(195 100% 44% / 0.3);
+            }
+            50% {
+                box-shadow: 0 0 40px hsl(195 100% 44% / 0.6);
+            }
+        }
+        
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        /* Button styles */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-primary {
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+        
+        .btn-primary:hover {
+            background-color: hsl(195 100% 40%);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 20px -5px hsl(195 100% 44% / 0.4);
+        }
+        
+        .btn-success {
+            background-color: hsl(var(--success));
+            color: hsl(var(--success-foreground));
+        }
+        
+        .btn-success:hover {
+            background-color: hsl(142 76% 32%);
+            transform: translateY(-1px);
+            box-shadow: 0 10px 20px -5px hsl(142 76% 36% / 0.4);
+        }
+        
+        .btn-outline {
+            border: 2px solid hsl(var(--primary));
+            color: hsl(var(--primary));
+            background: transparent;
+        }
+        
+        .btn-outline:hover {
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+        
+        .btn-ghost {
+            background: transparent;
+            color: hsl(var(--card-foreground));
+        }
+        
+        .btn-ghost:hover {
+            background-color: hsl(var(--muted));
+        }
+        
+        /* Card styles */
+        .card {
+            background-color: hsl(var(--card));
+            border: 1px solid hsl(var(--border));
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Badge styles */
+        .badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        
+        .badge-secondary {
+            background-color: hsl(var(--muted));
+            color: hsl(var(--muted-foreground));
+        }
+        
+        .badge-success {
+            background-color: hsl(var(--success));
+            color: hsl(var(--success-foreground));
+        }
+        
+        .badge-primary {
+            background-color: hsl(var(--primary));
+            color: hsl(var(--primary-foreground));
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .desktop-nav {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+        }
+        
+        @media (min-width: 769px) {
+            .desktop-nav {
+                display: flex;
+            }
+            
+            .mobile-menu-btn {
+                display: none;
+            }
+        }
+    </style>
 </head>
-<body>
-<div id="root"></div><script type="module" src="https://static-s3.skyworkcdn.com/fe/skywork-site-assets/scripts/embed_website.min.js"></script>
+<body class="bg-white text-gray-900">
+    <!-- Header -->
+    <header class="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                    </svg>
+                    <span class="text-xl font-bold text-primary">ProfitServer</span>
+                    <span class="badge badge-secondary ml-2">Партнер</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav items-center space-x-6">
+                    <a href="#case-study" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">Кейс</a>
+                    <a href="#benefits" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">Преимущества</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">Тарифы</a>
+                    <a href="#testimonials" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">Отзывы</a>
+                    <a href="#contact" class="text-gray-700 hover:text-primary transition-colors duration-200 font-medium">Контакты</a>
+                </nav>
+                
+                <div class="flex items-center space-x-3">
+                    <a href="https://profitserver.ru/knowledge-base/" target="_blank" class="btn btn-outline hidden sm:inline-flex">База Знаний</a>
+                    <a href="https://profitserver.ru/?from=partner" target="_blank" class="btn btn-primary pulse-glow">Заказать VPS</a>
+                    
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn btn btn-ghost p-2" onclick="toggleMobileMenu()">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="mobile-menu border-t border-gray-200 bg-white/95 backdrop-blur-sm mt-4">
+                <div class="py-4 space-y-3">
+                    <a href="#case-study" class="block py-2 text-gray-700 hover:text-primary transition-colors duration-200 font-medium" onclick="closeMobileMenu()">Кейс</a>
+                    <a href="#benefits" class="block py-2 text-gray-700 hover:text-primary transition-colors duration-200 font-medium" onclick="closeMobileMenu()">Преимущества</a>
+                    <a href="#pricing" class="block py-2 text-gray-700 hover:text-primary transition-colors duration-200 font-medium" onclick="closeMobileMenu()">Тарифы</a>
+                    <a href="#testimonials" class="block py-2 text-gray-700 hover:text-primary transition-colors duration-200 font-medium" onclick="closeMobileMenu()">Отзывы</a>
+                    <a href="#contact" class="block py-2 text-gray-700 hover:text-primary transition-colors duration-200 font-medium" onclick="closeMobileMenu()">Контакты</a>
+                    <div class="pt-3 border-t border-gray-200 space-y-2">
+                        <a href="https://profitserver.ru/knowledge-base/" target="_blank" class="btn btn-outline w-full">База Знаний</a>
+                        <a href="https://profitserver.ru/?from=partner" target="_blank" class="btn btn-primary w-full">Заказать VPS</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white py-20 fade-in">
+        <div class="container mx-auto px-4 text-center">
+            <span class="badge badge-success mb-6 inline-block">✨ Кейс: 10% Пассивного Дохода</span>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                Как Мы Получили <span class="text-primary">10% Дохода</span><br>
+                Используя VPS ProfitServer
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
+                Реальная история о том, как качественные VPS серверы от 190₽/месяц 
+                помогли создать стабильный источник пассивного дохода
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://profitserver.ru/?from=partner" target="_blank" class="btn btn-success text-lg px-8 py-4">
+                    Получить VPS со Скидкой
+                </a>
+                <a href="#case-study" class="btn btn-outline text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-gray-900">
+                    Читать Кейс
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Case Study Section -->
+    <section id="case-study" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">Наш Кейс: 10% Пассивного Дохода</h2>
+                    <p class="text-xl text-gray-600">
+                        Как мы использовали VPS серверы ProfitServer для создания прибыльного проекта
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 items-center mb-12">
+                    <div>
+                        <img src="https://chartexpo.com/blog/wp-content/uploads/2024/01/income-vs-profit-vs-revenue.jpg" 
+                             alt="График роста прибыли" 
+                             class="rounded-lg shadow-lg w-full">
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-success mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-lg">Стартовые Инвестиции</h3>
+                                <p class="text-gray-600">Всего 590₽/месяц за VPS Master для запуска проекта</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-success mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-lg">Масштабирование</h3>
+                                <p class="text-gray-600">Легкое увеличение мощности по мере роста нагрузки</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <svg class="w-6 h-6 text-success mt-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            <div>
+                                <h3 class="font-semibold text-lg">Результат</h3>
+                                <p class="text-gray-600">10% месячной прибыльности от вложенных средств</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card" style="background: linear-gradient(to right, hsl(142 76% 36% / 0.1), hsl(195 100% 44% / 0.1)); border-color: hsl(142 76% 36% / 0.2);">
+                    <h3 class="text-2xl font-bold text-center mb-4">Ключ к Успеху</h3>
+                    <p class="text-center text-lg">
+                        Надежная инфраструктура ProfitServer позволила нам сосредоточиться на развитии бизнеса, 
+                        а не на технических проблемах. Серверы работают стабильно 24/7, 
+                        что критично для получения постоянного дохода.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section id="benefits" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Почему Именно ProfitServer?</h2>
+                <p class="text-xl text-gray-600">
+                    Преимущества, которые помогли нам достичь успеха
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="card card-hover text-center">
+                    <div class="mx-auto mb-4">
+                        <svg class="w-8 h-8 text-success mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">10% Пассивного Дохода</h3>
+                    <p class="text-gray-600">Стабильный доход от каждого привлеченного клиента</p>
+                </div>
+                
+                <div class="card card-hover text-center">
+                    <div class="mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Надежная Инфраструктура</h3>
+                    <p class="text-gray-600">TIER-III дата-центры в 20+ странах мира</p>
+                </div>
+                
+                <div class="card card-hover text-center">
+                    <div class="mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">DDoS Защита</h3>
+                    <p class="text-gray-600">Многоуровневая защита от атак в реальном времени</p>
+                </div>
+                
+                <div class="card card-hover text-center">
+                    <div class="mx-auto mb-4">
+                        <svg class="w-8 h-8 text-warning mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-2">Быстрая Установка</h3>
+                    <p class="text-gray-600">Сервер готов к работе за несколько минут</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Выберите Свой VPS</h2>
+                <p class="text-xl text-gray-600">
+                    Начните с минимального тарифа и масштабируйтесь по мере роста
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="card card-hover relative">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Optima</h3>
+                        <div class="text-3xl font-bold text-primary">190 ₽<span class="text-sm text-gray-500">/мес</span></div>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span>CPU:</span>
+                            <span class="font-semibold">1 ядро</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>RAM:</span>
+                            <span class="font-semibold">0.5 GB</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Диск:</span>
+                            <span class="font-semibold">15 GB SSD</span>
+                        </div>
+                    </div>
+                    <a href="https://profitserver.ru/?from=partner" target="_blank" class="btn btn-outline w-full">Заказать</a>
+                </div>
+                
+                <div class="card card-hover relative border-primary shadow-lg">
+                    <span class="badge badge-primary absolute -top-3 left-1/2 transform -translate-x-1/2">Популярный</span>
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Profi</h3>
+                        <div class="text-3xl font-bold text-primary">290 ₽<span class="text-sm text-gray-500">/мес</span></div>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span>CPU:</span>
+                            <span class="font-semibold">2 ядра</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>RAM:</span>
+                            <span class="font-semibold">1 GB</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Диск:</span>
+                            <span class="font-semibold">25 GB SSD</span>
+                        </div>
+                    </div>
+                    <a href="https://profitserver.ru/?from=partner" target="_blank" class="btn btn-primary w-full">Заказать</a>
+                </div>
+                
+                <div class="card card-hover relative">
+                    <div class="text-center mb-6">
+                        <h3 class="text-2xl font-bold mb-2">Master</h3>
+                        <div class="text-3xl font-bold text-primary">590 ₽<span class="text-sm text-gray-500">/мес</span></div>
+                    </div>
+                    <div class="space-y-3 mb-6">
+                        <div class="flex justify-between">
+                            <span>CPU:</span>
+                            <span class="font-semibold">4 ядра</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>RAM:</span>
+                            <span class="font-semibold">2 GB</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Диск:</span>
+                            <span class="font-semibold">50 GB SSD</span>
+                        </div>
+                    </div>
+                    <a href="https://profitserver.ru/?from=partner" target="_blank" class="btn btn-outline w-full">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section id="testimonials" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">Отзывы Клиентов</h2>
+                <p class="text-xl text-gray-600">
+                    Что говорят те, кто уже использует ProfitServer
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+                <div class="card card-hover">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div>
+                            <h4 class="text-lg font-semibold">Алексей М.</h4>
+                            <p class="text-gray-600">IT-предприниматель</p>
+                        </div>
+                        <div class="flex ml-auto">
+                            <svg class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"За 6 месяцев заработал более 50,000 рублей, просто рекомендуя ProfitServer коллегам"</p>
+                </div>
+                
+                <div class="card card-hover">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div>
+                            <h4 class="text-lg font-semibold">Мария К.</h4>
+                            <p class="text-gray-600">Веб-разработчик</p>
+                        </div>
+                        <div class="flex ml-auto">
+                            <svg class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                            <svg class="w-4 h-4 text-warning fill-current" viewBox="0 0 20 20">
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 italic">"Отличное качество серверов и стабильные выплаты. Рекомендую всем!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="py-20 hero-gradient text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-4xl font-bold mb-6">
+                Начните Зарабатывать Уже Сегодня
+            </h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">
+                Присоединяйтесь к тысячам довольных клиентов ProfitServer. 
+                Надежные VPS серверы от 190₽/месяц с гарантией качества.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://profitserver.ru/?from=partner" target="_blank" class="btn btn-success text-lg px-8 py-4 pulse-glow">
+                    Заказать VPS Сейчас
+                </a>
+                <a href="https://profitserver.ru/knowledge-base/" target="_blank" class="btn btn-outline text-lg px-8 py-4 border-white text-white hover:bg-white hover:text-gray-900">
+                    База Знаний
+                </a>
+            </div>
+            
+            <div class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+                <div class="text-center">
+                    <div class="text-2xl font-bold">99.9%</div>
+                    <div class="text-sm text-gray-300">Uptime</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold">24/7</div>
+                    <div class="text-sm text-gray-300">Поддержка</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold">20+</div>
+                    <div class="text-sm text-gray-300">Стран</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-bold">10K+</div>
+                    <div class="text-sm text-gray-300">Клиентов</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">Свяжитесь с Нами</h2>
+                    <p class="text-xl text-gray-600">
+                        Есть вопросы о VPS серверах? Мы поможем выбрать оптимальное решение
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="card card-hover">
+                        <div class="flex items-center space-x-2 mb-4">
+                            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+                            </svg>
+                            <span class="font-semibold">Отправить Сообщение</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">Заполните форму и мы ответим в течение 24 часов</p>
+                        
+                        <form class="space-y-4" onsubmit="handleContactForm(event)">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Имя</label>
+                                <input type="text" name="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ваше имя">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                                <input type="email" name="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="your@email.com">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Сообщение</label>
+                                <textarea name="message" required rows="4" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Расскажите о ваших потребностях в VPS..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full">Отправить Сообщение</button>
+                        </form>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="card card-hover">
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                </svg>
+                                <div>
+                                    <h3 class="font-semibold">Email</h3>
+                                    <p class="text-gray-600">support@profitserver.ru</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card card-hover">
+                            <div class="flex items-center space-x-3">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                                <div>
+                                    <h3 class="font-semibold">Телефон</h3>
+                                    <p class="text-gray-600">+7 (351) 72-999-71</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="card" style="background: linear-gradient(to right, hsl(195 100% 44% / 0.1), hsl(142 76% 36% / 0.1)); border-color: hsl(195 100% 44% / 0.2);">
+                            <h3 class="font-semibold mb-2">Техподдержка 24/7</h3>
+                            <p class="text-gray-600 text-sm">
+                                Наша команда готова помочь вам в любое время. 
+                                Средний ответ в течение 15 минут.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"></path>
+                        </svg>
+                        <span class="text-lg font-bold">ProfitServer</span>
+                    </div>
+                    <p class="text-sm text-gray-300">
+                        Надежные VPS серверы для вашего бизнеса. 
+                        Партнерский лендинг с реальным кейсом успеха.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Услуги</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>VPS/VDS Серверы</li>
+                        <li>Выделенные Серверы</li>
+                        <li>Хостинг</li>
+                        <li>SSL Сертификаты</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold mb-4">Поддержка</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li>База Знаний</li>
+                        <li>Техподдержка 24/7</li>
+                        <li>Партнерская Программа</li>
+                        <li>Контакты</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-600 mt-8 pt-8 text-center text-sm text-gray-400">
+                <p>© 2024 ProfitServer. Партнерский лендинг. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="fixed bottom-6 right-6 z-50 btn btn-primary rounded-full w-12 h-12 p-0 shadow-lg hover:shadow-xl transition-all duration-300 opacity-0 invisible" onclick="scrollToTop()">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+    
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('active');
+        }
+        
+        function closeMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.remove('active');
+        }
+        
+        // Scroll to top functionality
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Show/hide scroll to top button
+        window.addEventListener('scroll', function() {
+            const scrollButton = document.getElementById('scrollToTop');
+            if (window.pageYOffset > 300) {
+                scrollButton.classList.remove('opacity-0', 'invisible');
+                scrollButton.classList.add('opacity-100', 'visible');
+            } else {
+                scrollButton.classList.add('opacity-0', 'invisible');
+                scrollButton.classList.remove('opacity-100', 'visible');
+            }
+        });
+        
+        // Contact form handler
+        function handleContactForm(event) {
+            event.preventDefault();
+            alert('Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.');
+            event.target.reset();
+        }
+        
+        // Fade in animation on load
+        window.addEventListener('load', function() {
+            document.querySelector('.fade-in').style.opacity = '1';
+        });
+        
+        // Close mobile menu when clicking on links
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('#mobile-menu a')) {
+                closeMobileMenu();
+            }
+        });
+    </script>
 </body>
 </html>
